@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FanucFocasTutorial
 {
-    class Connect_CheckIP
+    class Connect_CheckHSSB
     {
         private static ushort _handle = 0;
         private static short _ret = 0;

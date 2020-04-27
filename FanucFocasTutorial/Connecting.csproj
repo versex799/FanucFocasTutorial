@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="CNCHardware.cs" />
     <Compile Include="fwlib32.cs" />
-    <Compile Include="Connect_CheckIP.cs" />
+    <Compile Include="Connect_CheckHSSB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
