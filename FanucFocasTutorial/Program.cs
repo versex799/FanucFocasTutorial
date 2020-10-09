@@ -13,8 +13,6 @@ namespace FanucFocasTutorial
 
         static void Main(string[] args)
         {
-            printPat(4);
-
             string ipaddr = "";
 
             // If we specified an ip address, get it from the args
@@ -43,26 +41,6 @@ namespace FanucFocasTutorial
 
             // Free the Focas handle
             Focas1.cnc_freelibhndl(_handle);
-        }
-
-        private static void printPat(int startingNum)
-        {
-            var printStr = "";
-
-            for(int i = startingNum; i > 0; i--)
-            {
-                for(int j = startingNum; j > 0; j--)
-                {
-                    for (int k = i; k > 0; k--)
-                    {
-                        printStr += j;
-                    }
-                }
-
-                printStr += "$";
-            }
-
-            Console.WriteLine(printStr);
         }
     }
 }

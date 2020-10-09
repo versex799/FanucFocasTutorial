@@ -89,6 +89,32 @@ namespace FanucFocasTutorial
             return _axisPositionMachine.data[0] / _scale;
         }
 
+        public double GetAllAxisAbsolutePositions()
+        {
+            if (_handle == 0)
+                return 0;
+
+            try
+            {
+                Focas1.ODBAXIS _axisPositionMachine = new Focas1.ODBAXIS();
+                _ret = Focas1.cnc_absolute(_handle, -1, 4 + 4 * Focas1.MAX_AXIS, _axisPositionMachine);
+
+                if (_ret != Focas1.EW_OK)
+                    return _ret;
+
+                for (int i = 0; i < Focas1.MAX_AXIS; i++)
+                {
+                    Console.WriteLine(i.ToString() + " = " + _axisPositionMachine.data[i] / _scale);
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            return 0;
+        }
+
         // I used a switch function to demonstrate, but
         // there are better methods out there. 
         private string GetModeString(short mode)
