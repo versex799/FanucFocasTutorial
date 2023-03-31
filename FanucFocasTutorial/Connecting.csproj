@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CNCHardware.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Fanuc.cs" />
     <Compile Include="fwlib32.cs" />
     <Compile Include="Connect_CheckHSSB.cs" />
